@@ -1,0 +1,21 @@
+### External Python libraries to install in venv
+# TODO: add versions
+
+# dev stuff
+ipykernel
+black
+black[jupyter]
+
+# blockchain stuff
+eth-brownie
+web3
+
+# server stuff
+flask
+flask_cors
+gunicorn
+python-dotenv==0.16.0
+
+# db
+sqlalchemy
+psycopg2

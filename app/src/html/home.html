@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/src/css/main.css" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body x-data class="space-y-6 border m-20 align-center items-center text-center">
+    <!-- Some data bound to a variable -->
+    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" class="border"></h1>
+
+    <!-- COUNTER -->
+    <div x-data="{ count: 0 }">
+      <button x-on:click="count++">Increment</button>
+
+      <span x-text="count"></span>
+    </div>
+
+    <!-- A dropdown -->
+    <div x-data="{ open: false }">
+      <button @click="open = ! open">Toggle</button>
+
+      <div x-show="open" @click.outside="open = false">Contents...</div>
+    </div>
+
+    <!-- A search input -->
+    <div x-data="{
+        search: '',
+ 
+        items: ['foo', 'bar', 'baz'],
+ 
+        get filteredItems() {
+            return this.items.filter(
+                i => i.startsWith(this.search)
+            )
+        }
+    }">
+      <input x-model="search" placeholder="Search...">
+
+      <ul>
+        <template x-for="item in filteredItems" :key="item">
+          <li x-text="item"></li>
+        </template>
+      </ul>
+    </div>
+</body>
+
+</html>

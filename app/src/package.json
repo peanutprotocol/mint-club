@@ -1,0 +1,32 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./css/base.css -o ./css/main.css",
+    "build-css-forever": "npx tailwindcss -i ./css/base.css -o ./css/main.css --watch",
+    "start:dev": "ENV=dev && npm run build-css && cd .. && python app.py",
+    "start:prod": "ENV=prod && npm run build-css && cd .. && python app.py",
+    "yeet-it": "npm run build-css && git add -A && git commit -m \"yeet it 😈\" && git push && echo \"\nyeeeeeeeeeeeeeeeeeeted it 😈\n\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32",
+    "animate.css": "^4.1.1",
+    "jazzicon": "^1.5.0",
+    "wow.js": "^1.2.2",
+    "tailwindcss": "^3.1.6",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
+    "@tailwindcss/typography": "^0.5.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}
