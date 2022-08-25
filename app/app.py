@@ -46,6 +46,12 @@ def home():
     return render_template("home.html")
 
 
+# home
+@app.route("/example", methods=["GET"])
+def example():
+    return render_template("tailwind_example.html")
+
+
 # RUN SERVER
 if __name__ == "__main__":    
     # differentiate between local and production
