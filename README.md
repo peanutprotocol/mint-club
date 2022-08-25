@@ -1,6 +1,6 @@
-# Mailcrypto
+# Mint club
 
-Send crypto to any email address.
+Mintclubbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 <br>
 
@@ -62,11 +62,11 @@ npm run start:prod
 npm run yeet-it
 ```
 
-⬆️ This says fuck it, builds the css, adds all files to a git commit, and pushes to github. It then gets autodeployed to www.mailcrypto.xyz.⬆️ 
+⬆️ This says fuck it, builds the css, adds all files to a git commit, and pushes to github. It then gets autodeployed to the web!⬆️ 
 
 
 ## TODO
 
-- [ ] swap out landing page images
-- [ ] email notifications
-- [ ] deploy smart contract
+- [ ] sc
+- [ ] frontend
+- [ ] mint script
