@@ -1,13 +1,14 @@
 ### External Python libraries to install in venv
-# TODO: add versions
 
 # dev stuff
 ipykernel
 black
 black[jupyter]
+autoflake   # autoflake --in-place --remove-unused-variables --remove-all-unused-imports -r .
 
 # blockchain stuff
 eth-brownie
+ethpm-cli
 web3
 
 # server stuff
@@ -19,3 +20,9 @@ python-dotenv==0.16.0
 # db
 sqlalchemy
 psycopg2
+
+
+# brownie stuff
+# brownie pm install Openzeppelin/openzeppelin-contracts@4.7.3
+# brownie pm install smartcontractkit/chainlink@1.7.1
+# brownie pm install smartcontractkit/chainlink-brownie-contracts@0.4.2

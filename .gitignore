@@ -5,6 +5,10 @@ secrets.json
 *.zip
 *.csv
 contracts/
+contracts_hardhat
+contracts2/
+
+
 
 
 # random stuff
