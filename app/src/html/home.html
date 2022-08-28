@@ -1,27 +1,100 @@
 <html>
 
-<head>
-  <link rel="stylesheet" type="text/css" href="/src/css/main.css" />
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22
+      viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>" />
 
+<title>Mint Sniper</title>
+<meta name="description" content="Mint Sniper" />
+<meta property="description" content="Mint Sniper" />
+<meta name="keywords" content="crypto, web3, testnet, ether" />
+<meta property="og:title" content="Mint Sniper" />
+<meta property="og:url" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Mint Sniper" />
+<meta property="twitter:domain" content="" />
+<meta property="twitter:title" content="Mint Sniper" />
+<meta property="twitter:description" content="Mint Sniper" />
+<meta property="twitter:image" content="" />
+
+<head>
+
+  <!-- @konrad REBUILD CSS AND REPLACE CDN -->
+  <!-- <link rel="stylesheet" type="text/css" href="/src/css/main.css" /> -->
   <script src="https://cdn.tailwindcss.com/"></script>
 
+
+
+
+  <script src="src/js/colors.js"></script>
+
+  <script src="src/js/slideshow.js"></script>
+
+
+
+  <!-- css -->
+  <link rel="stylesheet" href="src/css/main.css">
+  <link rel="stylesheet" href="src/css/base.css">
+
+
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+  <!-- include html (requires calling includeHTML(); at end of body) -->
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4) {
+              if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+              if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+  </script>
 </head>
 
-<body>
-  
-  
-<!-- This example requires Tailwind CSS v2.0+ -->
-<div class="bg-indigo-700">
-  <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-    <h2 class="text-3xl tracking-tight font-bold text-white sm:text-4xl">
-      <span class="block">Boost your productivity.</span>
-      <span class="block">Start using Workflow today.</span>
-    </h2>
-    <p class="mt-4 text-lg leading-6 text-indigo-200">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
-    <a href="#" class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 sm:w-auto"> Sign up for free </a>
+<body class="mouse-bg-color">
+
+  <!-- HEADER -->
+  <div w3-include-html="/src/html/nav.html"></div>
+
+  <div class="dotted-bg h-full -z-10">
+
+
+    <!-- MAIN -->
+    <div w3-include-html="/src/html/main.html"></div>
+    
+    <!-- FOOTER -->
+    <div w3-include-html="/src/html/footer.html"></div>
+
+
+    <script>
+      includeHTML();
+    </script>
+
   </div>
-</div>
 
 
 

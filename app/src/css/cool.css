@@ -1,0 +1,36 @@
+
+
+
+  
+/* shape transitions */
+/* class="shape square to-blob" */
+.shape {
+  width: 100%; 
+  height: 100%;
+  background: #4285F4;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  z-index: -20;
+}
+.shape.square {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.shape.square.to-blob:hover {
+    -webkit-clip-path: polygon(25% 0, 50% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+}
+
+
+
+  /* moving blob */
+.blob {
+    position: absolute;
+    fill: hsl(var(--d), 100%, 33%);
+    width: 120%;
+    z-index: -20;
+    animation: move 180s ease-in-out infinite;
+    transform-origin: 50% 50%;
+  }
+  

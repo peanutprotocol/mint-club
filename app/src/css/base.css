@@ -1,3 +1,449 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .box-shadow-black {
+    box-shadow: 0.125rem 0.125rem 0 0px #000;
+  }
+}
+
+/* debug */
+/* div {outline: 1px solid red;} */
+
+/* cursor */
+
+* {
+  cursor: url('../media/cursor.cur'), crosshair;
+}
+
+
+
+@keyframes move {
+  0% {
+    transform: scale(1) translate(10px, -30px);
+  }
+
+  38% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+
+  40% {
+    transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+  }
+
+  78% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+
+  80% {
+    transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+  }
+
+  100% {
+    transform: scale(1) translate(10px, -30px);
+  }
+}
+
+
+/* color changer */
+
+.mouse-bg-color {
+  background: hsl(var(--h), 80%, 33%);
+  z-index: -10;
+}
+
+.black-stroke-1 {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.color-reverse {
+  color: hsl(var(--d), 100%, 50%);
+}
+
+.bg-color-reverse {
+  background: hsl(var(--d), 100%, 50%);
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+
+.dotted-bg {
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+.brutalborder {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  box-shadow: 0.125rem 0.125rem 0 0px #000;
+  box-sizing: border-box;
+}
+
+
+/* windows */
+.window {
+  background-color: white;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  box-shadow: 0.125rem 0.125rem 0 0px #000;
+}
+
+.titlebar {
+  font-size: small;
+  text-transform: uppercase;
+  line-height: 20px;
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  border-bottom: 1px solid black;
+}
+
+.buttons {
+  padding-right: 8px;
+  padding-top: 3px;
+  float: right;
+  line-height: 0px;
+}
+
+.close {
+  width: 11px;
+  height: 11px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.crossclose {
+  position: relative;
+  height: 11px;
+  width: 11px;
+  /* maintain 1:1 aspect ratio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crossclose::before,
+.crossclose::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  /* cross thickness */
+  background-color: black;
+}
+
+.crossclose::before {
+  transform: rotate(45deg);
+}
+
+.crossclose::after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+/* image rotation */
+.rotate {
+  position: absolute;
+  margin: -60px 0 0 -60px;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+$base-duration: 300ms;
+
+// Colors
+$color-1: #E91E63;
+$color-2: #03A9F4;
+$color-3: #2ecc71;
+$black: #000;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+
+.glitch {
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+  z-index: 30;
+}
+
+
+.glitch {
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+  z-index: 30;
+}
+
+.glitch span {
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
+  }
+}
+
+
+
+
+
+.text-flicker {
+  $font: "Roboto", monospace;
+	color: #203e86;
+
+	$steps: 50;
+	.experiment-title {
+		outline: none;
+		font-size: 10vw;
+		text-align: center;
+		font-family: $font;
+		min-height: 10vw;
+		max-width: 80vw;
+		min-width: 10vw;
+		
+		&,
+		* {
+			animation: cray 6s infinite steps($steps);
+			display: inline-block;
+		}
+	}
+
+	@keyframes cray {
+		@for $i from 1 to $steps {
+			$per: 100% / $steps * $i;
+			$weight: (
+				100,
+				200,
+				300,
+				400,
+				500,
+				600,
+				700
+			);
+			$style: (
+				normal,
+				italic,
+				normal,
+				normal
+			);
+			$decor: (
+				none,
+				none,
+				line-through,
+				underline,
+				none,
+				none,
+				none
+			);
+			$trans: (
+				none,
+				none,
+				uppercase,
+				lowercase,
+				capitalize,
+				none,
+				none,
+				none,
+				none,
+				none,
+				none
+			);
+
+			$arrayW: random(7);
+			$arrayS: random(4);
+			$arrayD: random(7);
+			$arrayT: random(11);
+
+			#{$per} {
+				font-weight: nth($weight, $arrayW);
+				font-style: nth($style, $arrayS);
+				text-decoration: nth($decor, $arrayD);
+				text-transform: nth($trans, $arrayT);
+			}
+		}
+	}
+}
+
+
+
+/* slideshow */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
