@@ -158,9 +158,9 @@
 .rotate {
   position: absolute;
   margin: -60px 0 0 -60px;
-  -webkit-animation: spin 4s linear infinite;
-  -moz-animation: spin 4s linear infinite;
-  animation: spin 4s linear infinite;
+  -webkit-animation: spin 32s linear infinite;
+  -moz-animation: spin 32s linear infinite;
+  animation: spin 32s linear infinite;
 }
 
 @-moz-keyframes spin {
@@ -186,11 +186,7 @@
 
 $base-duration: 300ms;
 
-// Colors
-$color-1: #E91E63;
-$color-2: #03A9F4;
-$color-3: #2ecc71;
-$black: #000;
+
 
 // Breakpoints
 $sm: new-breakpoint(min-width 320px);
@@ -205,13 +201,7 @@ $lg: new-breakpoint(min-width 1024px);
 }
 
 
-
-.glitch {
-  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
-  animation: glitch 725ms infinite;
-  z-index: 30;
-}
-
+/* glitch gigachad hero */
 
 .glitch {
   text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
@@ -359,91 +349,49 @@ $lg: new-breakpoint(min-width 1024px);
 
 
 
-/* slideshow */
-* {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.slidescontainer {
+  overflow: hidden;
+  display: flex;
   width: 100%;
-  text-align: center;
+  margin: 0 auto;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.slidescontainer div {
+  min-width: 300px;
+  margin-left: 20px;
+  animation: slide 15s linear infinite alternate;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.pink {
+  background-color: pink;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.blue {
+  background-color: blue;
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.yellow {
+  background-color: yellow;
 }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.aqua {
+  background-color: aqua;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1600px, 0, 0); /* The image width */
+  }
 }

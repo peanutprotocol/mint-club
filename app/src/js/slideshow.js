@@ -1,6 +1,8 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
+console.log('loaded slideshow.js');
+
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
