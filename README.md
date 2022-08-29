@@ -79,3 +79,9 @@ npm run yeet-it
 
 
 
+<<<<<<< HEAD
+=======
+- [x] sc
+- [x] frontend
+- [x] mint script
+>>>>>>> e7aa11c4ca3c5688f952effb1a221c1ac1b801d0
