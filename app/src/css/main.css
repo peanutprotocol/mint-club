@@ -386,7 +386,7 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-/* img, */
+img,
 svg,
 video,
 canvas,
@@ -794,8 +794,8 @@ select {
   z-index: -10;
 }
 
-.z-50 {
-  z-index: 50;
+.-z-50 {
+  z-index: -50;
 }
 
 .z-20 {
@@ -887,8 +887,8 @@ select {
   width: 8rem;
 }
 
-.w-1\/4 {
-  width: 25%;
+.w-64 {
+  width: 16rem;
 }
 
 .min-w-fit {
@@ -954,6 +954,10 @@ select {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .border {
@@ -1262,6 +1266,7 @@ button:active {
 /* image rotation */
 
 .rotate {
+  margin: -60px 0 0 -60px;
   -webkit-animation: spin 32s linear infinite;
   animation: spin 32s linear infinite;
 }
@@ -2212,9 +2217,8 @@ button:active {
     display: none;
   }
 
-  .lg\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .lg\:text-\[300px\] {
+    font-size: 300px;
   }
 
   .lg\:text-xl {
