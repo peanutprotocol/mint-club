@@ -176,17 +176,6 @@
   }
 }
 
-
-
-$base-duration: 300ms;
-
-
-
-// Breakpoints
-$sm: new-breakpoint(min-width 320px);
-$med: new-breakpoint(min-width 768px);
-$lg: new-breakpoint(min-width 1024px);
-
 *,
 *:before,
 *:after {
