@@ -1,10 +1,23 @@
 # Mint club
 
-Mintclubbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Mint Snipe (✿ ❛‿❛)︻デ═一
 
-<br>
 
-## Instructions
+
+# About the Project
+
+The NFT community uses free NFT minting as a way to kick-start the market and create some initial hype. 
+
+Mint Snipe XYZ does:
+* scrapes Twitter for free minting opportunities
+* mints free NFTs
+* fairly sends the NFT to someone who's bought a raffle ticket, using Chainlink VRF
+
+This is a project by Hugo & Konrad from Prophet 💙
+
+https://www.tella.tv/video/cl7e741wb00000hij3pe830kc/view
+
+# Instructions
 
 (Assuming linux terminal. If on windows consider using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install))
 
@@ -65,8 +78,4 @@ npm run yeet-it
 ⬆️ This says fuck it, builds the css, adds all files to a git commit, and pushes to github. It then gets autodeployed to the web!⬆️ 
 
 
-## TODO
 
-- [ ] sc
-- [ ] frontend
-- [ ] mint script
