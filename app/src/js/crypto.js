@@ -59,7 +59,10 @@ async function buySlot() {
   if (Alpine.store("processingTransaction")) {
     return;
   }
-  connect();
+  if (!Alpine.store("connected")) {
+    console.log("Not connected to network");
+    return;
+  }
   try {
 
     Alpine.store('processingTransaction', true);
