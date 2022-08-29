@@ -67,6 +67,6 @@ npm run yeet-it
 
 ## TODO
 
-- [ ] sc
-- [ ] frontend
-- [ ] mint script
+- [x] sc
+- [x] frontend
+- [x] mint script
