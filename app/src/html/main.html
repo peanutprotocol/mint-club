@@ -1,12 +1,11 @@
 <!-- CTA -->
-<div class="text-center fixed bottom-16 left-16 z-50">
-    <a href="" class="href">
-        <div class="p-2">
-            <span class="visible text-5xl lg:text-9xl font-bold uppercase black-stroke-1 color-reverse glitch">Snipe
-                Now</span>
+<div class="text-center fixed bottom-16 left-16 -z-50 overflow-hidden">
+    <a href="#" class="visible text-5xl lg:text-[300px] font-bold uppercase black-stroke-1 color-reverse glitch"
+        x-on:click="buySlot()">
+        Snipe Now
     </a>
 </div>
-</div>
+
 
 
 
@@ -27,7 +26,7 @@
                 > Our bots <span class="glitch-letters font-extrabold"> scan </span> the interwebs for free mints. They
                 never miss.
 
-                <p class="pt-2"> > We snipe the the free mint smart contracts directly with inhuman speed. </p>
+                <p class="pt-2"> > We snipe the the free mint smart contracts automatically with inhuman speed. </p>
                 <p class="pt-2"> > Buy a bullet for Ξ0.0066 ($10) and you'll get a free mint that we'll snipe for you.
                 </p>
             </span>
@@ -112,7 +111,7 @@
                     <img src="/src/media/4Jo1.gif" alt="">
                     <p class="text-sm  text-center px-2 leading-none"> Why isn't it yet? </p>
                     <button
-                        class="m-2 float-left min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black glitch"
+                        class="m-2 float-left min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black"
                         x-html="Alpine.store('buyButtonContent')" x-on:click="buySlot()">
                         Buy Bullet
                     </button>
@@ -144,19 +143,19 @@
         </div>
         <div class="p-6">
 
-            <span class="font-bold text-3xl font-mono text-black"  x-data="{open: false}">
+            <span class="font-bold text-3xl font-mono text-black" x-data="{open: false}">
 
-                > Don't believe this? Don't worry. <a href=""
-                    class="bg-black text-white hover:text-black hover:bg-white" @click="open=!open"> Balloo </a>will win
-                you over.
+                > Don't believe this? Don't worry.
+                <span class="bg-black text-white hover:text-black hover:bg-white" @click="open=!open"> Balloo
+                </span>will win
+                you over. <img src="/src/media/baloo_square.png" alt="" class="w-64 inline absolute" x-show="open"
+                    x-transition="" style="display: none;" @click="open=!open">
+
                 <p class="pt-2"> > In case that doesn't work. Here is <a href="src/html/backtest_free-mint.slides.html"
                         target="_blank" class="bg-black text-white hover:text-black hover:bg-white">a very scientific
-                        case study.</a> </p>
-                <p class="pt-2"> > Try it out and buy a bullet for gas cost X2 ($10-ish). </p>
+                        case study</a> (avg ROI 650%) </p>
+                <p class="pt-2"> > Try your shot buy a bullet for gas cost X2 ($10-ish).</p>
 
-
-
-                <img src="/src/media/baloo_square.png" alt="" class="w-1/4" x-show="open" x-transition x-cloak>
 
 
             </span>
@@ -177,15 +176,18 @@
 
 <div class="h-32">.</div>
 
+
 <!-- rotating Latest Mint -->
-<div class="rotate brutalborder bg-white w-32 z-20 mx-auto lg:fixed lg:bottom-16 lg:right-16">
-    <p class="text-center px-2"> Latest Snipe </p>
+<div class="w-full">
+    <div class="rotate mx-auto brutalborder bg-white w-32 z-20 lg:fixed lg:bottom-16 lg:right-16">
+        <p class="text-center px-2"> Latest Snipe </p>
 
-    <img class="w-32" src="/src/media/parrot 1501.png" alt="">
+        <img class="w-32" src="/src/media/parrot 1501.png" alt="">
 
-    <a href="https://opensea.io/assets/ethereum/0xe3d234267efea9fd5150cb6d630ab3123fa49f55/1501" class="hre">
-        <p class="text-sm text-center px-2 leading-none"> Parrot #1501 went to hugo0.eth </p>
-    </a>
+        <a href="https://opensea.io/assets/ethereum/0xe3d234267efea9fd5150cb6d630ab3123fa49f55/1501">
+            <p class="text-sm text-center px-2 leading-none"> Parrot #1501 went to hugo0.eth </p>
+        </a>
+    </div>
 </div>
 
 <div class="h-32">.</div>

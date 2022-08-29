@@ -7,7 +7,7 @@ Alpine.store("connectButtonContent", "CONNECT WALLET");
 Alpine.store("connectButtonDisabled", false);
 
 Alpine.store('processingTransaction', false);
-Alpine.store("buyButtonContent", "BUY SLOT");
+Alpine.store("buyButtonContent", "BUY BULLET");
 
 // mainnet: 0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4 // id 339
 // id 339
