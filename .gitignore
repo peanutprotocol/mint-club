@@ -4,7 +4,7 @@ secrets.json
 .env
 *.zip
 *.csv
-contracts/
+# contracts/
 contracts_hardhat
 contracts2/
 
