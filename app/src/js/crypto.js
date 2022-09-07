@@ -61,6 +61,7 @@ async function buySlot() {
   }
   if (!Alpine.store("connected")) {
     console.log("Not connected to network");
+    alert("Please connect to network with Metamask!");
     return;
   }
   try {
