@@ -27,7 +27,7 @@
                 <p class="pt-2"> > Buy a bullet for Ξ0.0066 ($10) and you'll get a free mint that we'll snipe for you.
                 </p>
             </span>
-            <div class="flex m-auto">
+            <div class="flex m-auto lg:hidden">
                 <button
                     class="mt-4 m-auto button w-1/3 min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black"
                     x-html="Alpine.store('buyButtonContent')" x-on:click="buySlot()">
@@ -140,10 +140,12 @@
                         case study</a> (avg ROI 650%) </p>
                 <p class="pt-2"> > Try your shot buy a bullet for gas cost X2 ($10-ish).</p>
 
+                
+
 
 
             </span>
-            <div class="flex m-auto">
+            <div class="flex m-auto lg:hidden">
                 <button
                     class="mt-4 m-auto button w-1/3 min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black"
                     x-html="Alpine.store('buyButtonContent')" x-on:click="buySlot()">
