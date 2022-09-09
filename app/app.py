@@ -12,6 +12,7 @@ import os
 import random
 import uuid
 import dotenv
+
 dotenv.load_dotenv("../.env")
 
 
@@ -53,7 +54,7 @@ def example():
 
 
 # RUN SERVER
-if __name__ == "__main__":    
+if __name__ == "__main__":
     # differentiate between local and production
     if "ENV" in os.environ:
         if os.environ["ENV"] == "PROD":

@@ -18,14 +18,14 @@ def main():
         {"from": dev},
         publish_source=get_publish_source(),
     )
-    
-    # Brownies console.log equivalent   
+
+    # Brownies console.log equivalent
     # have to add emit events in contract...
     print()
-    events = contract.tx.events # dictionary
+    events = contract.tx.events  # dictionary
     if "Log" in events:
         for e in events["Log"]:
-            print(e['message'])
+            print(e["message"])
     print()
 
     return contract

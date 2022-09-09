@@ -8,11 +8,8 @@ def test_init():
         pytest.skip("Only for local testing")
     escrow_c = EscrowC.deploy(
         {"from": get_account()},
-        
     )
-    
+
     assert escrow_c.address != None
     assert escrow_c.owner() == get_account()
     print(escrow_c.address)
-
-

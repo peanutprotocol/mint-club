@@ -17,10 +17,18 @@ flask_cors
 gunicorn
 python-dotenv==0.16.0
 
-# db
-sqlalchemy
-psycopg2
+# # db
+# sqlalchemy
+# psycopg2
 
+
+# Twitter & Scraping
+snscrape
+cloudscraper
+scrapingbee
+
+# data stuff
+pandas
 
 # brownie stuff
 # brownie pm install Openzeppelin/openzeppelin-contracts@4.7.3
