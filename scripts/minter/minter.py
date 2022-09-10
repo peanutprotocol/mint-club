@@ -101,7 +101,9 @@ def get_contract_address(opensea_url):
             links.append(href)
 
     assert len(links) > 0, "no links found"
-    assert len(links) < 2, "More than one contract address found"
+    if len(links) > 1:
+        # get the shortest link
+        links.sort(key=len)
 
     contract_address = links[0].split("/")[-1]
     return contract_address
@@ -138,7 +140,9 @@ def mint(contract_address, abi):
 
     # check that we have 0 balance in contract (havent minted yet)
     balance = contract.functions.balanceOf(admin_account.address).call()
-    assert balance == 0, "balance is not 0"
+    if balance > 0:
+        print(f"already minted, balance: {balance}")
+        return
 
     gas_price = web3.eth.gasPrice  # LEGACY
     print(f"gas price: {gas_price/1e9} gwei")
