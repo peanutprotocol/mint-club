@@ -117,12 +117,16 @@ def get_abi(contract_address):
 
 # get current price of a token
 def get_price(token):
-    url = "https://api.binance.com/api/v3/ticker/price"
-    params = {"symbol": token + "USDT"}
-    response = requests.get(url, params=params)
-    data = response.json()
-    price = data["price"]
-    return price
+    try:
+        url = "https://api.binance.com/api/v3/ticker/price"
+        params = {"symbol": token + "USDT"}
+        response = requests.get(url, params=params)
+        data = response.json()
+        print(data)
+        price = data["price"]
+        return price
+    except:
+        return 2000
 
 
 def mint(contract_address, abi):
