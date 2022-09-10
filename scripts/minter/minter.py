@@ -19,6 +19,7 @@ import json
 import random
 from scrapingbee import ScrapingBeeClient
 import sys
+import traceback
 
 # import cloudscraper
 
@@ -251,7 +252,11 @@ def process_tweet(tweet):
 def run_once(mins=5):
     # runs once and tries to mint on latest tweet
     tweets = get_tweets(mins=mins)
-    tweet = tweets[0]
+    try:
+        tweet = tweets[0]
+    except:
+        print(f"no tweets found in the last {mins} minutes")
+        return
     contract_address, abi = process_tweet(tweet)
     mint(contract_address, abi)
 
@@ -263,10 +268,9 @@ if __name__ == "__main__":
         run_once(mins=minutes+5)
     except Exception as e:
         print(e)
-        # print line
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
-        print(exc_type, fname, exc_tb.tb_lineno)
+        print(traceback.format_exc())
+
+
 
     # while True:
     #     print(f'running at {datetime.datetime.now()}')
