@@ -103,7 +103,7 @@ async function buySlot() {
 
     console.log("tx_receipt: " + tx_receipt);
 
-    alert("You have bought a slot! \n\n" + "tx: " + tx);
+    alert("You have bought a slot! \n\n" + "tx: " + tx.hash);
 
   } catch (error) {
     Alpine.store('buyButtonContent', 'Error')
