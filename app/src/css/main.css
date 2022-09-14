@@ -1379,8 +1379,8 @@ button:active {
 .slidescontainer div {
   min-width: 300px;
   margin-left: 20px;
-  -webkit-animation: slide 15s linear infinite alternate;
-          animation: slide 15s linear infinite alternate;
+  -webkit-animation: slide 30s linear infinite alternate;
+          animation: slide 30s linear infinite alternate;
 }
 
 .pink {
