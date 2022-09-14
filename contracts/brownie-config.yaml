@@ -4,11 +4,14 @@ reports:
   exclude_contracts:
     - SafeMath
 dependencies:
+    - smartcontractkit/chainlink-brownie-contracts@0.4.0
+    - OpenZeppelin/openzeppelin-contracts@4.3.2
 compiler:
-  solc:
-    remappings:
-  # version of the compiler to use
-  version: "0.8.0"
+    solc:
+        remappings:
+            - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.0"
+            - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.3.2"
+    version: "0.8.0"
 # automatically fetch contract sources from Etherscan
 autofetch_sources: True
 dotenv: .env

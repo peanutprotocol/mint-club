@@ -1,6 +1,9 @@
 
 //// Alpine Vars
 
+var gCHAIN = 'GOERLI';
+var gCHAIN = 'MAINNET';
+
 // setting Alpine.js global variables. You can access these from anywhere
 Alpine.store("connected", false);
 Alpine.store("connectButtonContent", "CONNECT WALLET");
@@ -9,19 +12,20 @@ Alpine.store("connectButtonDisabled", false);
 Alpine.store('processingTransaction', false);
 Alpine.store("buyButtonContent", "BUY BULLET");
 
-// mainnet: 0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4 // id 339
-// id 339
-// https://etherscan.io/address/0x5c1b67ed2809e371aabbc58d934282e8aa7e3fd4
-var goerliAddress = "0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4";
-
 // goerli: 0x5c1b67ed2809e371aabbc58d934282e8aa7e3fd4
 // id 716
 // https://goerli.etherscan.io/address/0x5c1b67ed2809e371aabbc58d934282e8aa7e3fd4
-var mainnetAddress = "0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4";
+var goerliAddress = "0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4";
+
+// mainnet: 0xd092f910be70328426530bca92c746de1e0989ec // id 339
+// id 339
+// https://etherscan.io/address/0xd092f910be70328426530bca92c746de1e0989ec
+var mainnetAddress = "0xd092f910be70328426530bca92c746de1e0989ec";
 
 
 
-Alpine.store("contractAddress", goerliAddress);
+
+Alpine.store("contractAddress", mainnetAddress);
 Alpine.store("contractAbi", contractAbi);
 
 // setting a global prover oject
@@ -38,19 +42,35 @@ async function connect() {
   console.log("Logged in with Account:", await signer.getAddress());
 
   // request connection to goerli network
-  web3
-    .request({
-      method: "wallet_switchEthereumChain",
-      params: [{ chainId: "0x5" }],
-    })
-    .then(function (response) {
-      console.log(response);
-    }).catch(function (error) {
-      console.log(error);
-    }).then(function () {
-      Alpine.store("connectButtonContent", "CONNECTED");
-      Alpine.store("connected", true);
-    })
+  if (gCHAIN == 'GOERLI') {
+    web3
+      .request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: "0x5" }],
+      })
+      .then(function (response) {
+        console.log(response);
+      }).catch(function (error) {
+        console.log(error);
+      }).then(function () {
+        Alpine.store("connectButtonContent", "CONNECTED");
+        Alpine.store("connected", true);
+      })
+  } else if (gCHAIN == 'MAINNET') {
+    web3
+      .request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: "0x1" }],
+      })
+      .then(function (response) {
+        console.log(response);
+      }).catch(function (error) {
+        console.log(error);
+      }).then(function () {
+        Alpine.store("connectButtonContent", "CONNECTED");
+        Alpine.store("connected", true);
+      })
+  }
 }
 
 

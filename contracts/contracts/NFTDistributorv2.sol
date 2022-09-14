@@ -34,22 +34,21 @@ interface IERC20 {
 //////////////////////////////////////////////////////////////////////////////////////
 
 
-contract NFTdistributor is VRFConsumerBaseV2, Ownable {
+contract NFTDistributorv2 is VRFConsumerBaseV2, Ownable {
     VRFCoordinatorV2Interface COORDINATOR;
 
     // Chainlik subscription ID.
     uint64 s_subscriptionId;
 
-    // Goerli 
+    // Chainlink VRF Coordinator address.
     // see https://docs.chain.link/docs/vrf-contracts/#configurations
-    address vrfCoordinator = 0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D;
-    //address vrfCoordinator = 0x271682DEB8C4E0901D1a1550aD2e64D568E69909; // mainnet
+    // address vrfCoordinator = 0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D; // goerli
+    address vrfCoordinator = 0x271682DEB8C4E0901D1a1550aD2e64D568E69909; // mainnet
 
     // The gas lane
     // see https://docs.chain.link/docs/vrf-contracts/#configurations
-    bytes32 keyHash =
-        0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15;
-    //bytes32 keyHash = 0x8af398995b04c28e9951adb9721ef74c74f93e6a478f39e7e0777be13527e7ef  // mainnet
+    // bytes32 keyHash = 0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15; // goerli
+    bytes32 keyHash = 0x8af398995b04c28e9951adb9721ef74c74f93e6a478f39e7e0777be13527e7ef;  // mainnet
 
     // ~20.000 gas per word
     uint32 callbackGasLimit = 100000;
@@ -76,10 +75,10 @@ contract NFTdistributor is VRFConsumerBaseV2, Ownable {
         s_subscriptionId = subscriptionId;
     }
 
-    // mintspot price of 0.0066 ether  (~$10)
+    // mintspot price of 0.0066 ether (~$10, approx same as gas price for mint+transfer+LINK with some margin)
     uint256 public mintPrice = 6600000000000000;
 
-    function exists1(address addr) public view returns (bool) {
+    function addressExists(address addr) public view returns (bool) {
         for (uint256 i = 0; i < mintSpots.length; i++) {
             if (mintSpots[i] == addr) {
                 return true;
@@ -93,7 +92,7 @@ contract NFTdistributor is VRFConsumerBaseV2, Ownable {
         require(msg.value >= mintPrice * _amount, "Not enough ETH");
         mintSpotBalance[msg.sender] += _amount;
         // if address not in array, add it
-        if (!exists1(msg.sender)) {
+        if (!addressExists(msg.sender)) {
             mintSpots.push(msg.sender);
         }
         emit MintSpotsBought(msg.sender, _amount);
@@ -107,7 +106,7 @@ contract NFTdistributor is VRFConsumerBaseV2, Ownable {
     }
 
     // Start NFT lottery distribution process
-    // ASSUMES the subscription is funded sufficiently.
+    // *ASSUMES* the LINK VRFv2 subscription is funded sufficiently.
     function requestRandomWords(address NFTAddress, uint256 _NFTId) external onlyOwner {
         // store NFT address and id so that no chickanery can be done!
         s_NFTAddress = NFTAddress;
@@ -156,6 +155,11 @@ contract NFTdistributor is VRFConsumerBaseV2, Ownable {
     function withdrawFunds() external onlyOwner {
         // withdraw funds from contract
         payable(msg.sender).transfer(address(this).balance);
+    }
+
+    function withdrawFundsAmount(uint256 amount) external onlyOwner {
+        // withdraw funds from contract
+        payable(msg.sender).transfer(amount);
     }
 
     function withdrawToken(address _tokenContract, uint256 _amount) external onlyOwner {
