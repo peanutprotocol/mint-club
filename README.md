@@ -2,7 +2,7 @@
 
 Mint Snipe (✿ ❛‿❛)︻デ═一
 
-
+See IPFS-hosted frontend here: https://ipfs.io/ipfs/bafkreigcbptjv5a6zfu5qhqd7jl5wlwgwdhhzsbxvlfvsvgge42vjg5334
 
 # About the Project
 
@@ -77,11 +77,3 @@ npm run yeet-it
 
 ⬆️ This says fuck it, builds the css, adds all files to a git commit, and pushes to github. It then gets autodeployed to the web!⬆️ 
 
-
-
-<<<<<<< HEAD
-=======
-- [x] sc
-- [x] frontend
-- [x] mint script
->>>>>>> e7aa11c4ca3c5688f952effb1a221c1ac1b801d0
