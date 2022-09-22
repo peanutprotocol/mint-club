@@ -1,0 +1,2725 @@
+<html lang="en">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<link rel="icon" href="/src/media/cursor.svg" type="image/svg+xml">
+
+
+<title>Mint Sniper</title>
+<meta name="description" content="Mint Sniper" />
+<meta property="description" content="Mint Sniper" />
+<meta name="keywords" content="crypto, web3, testnet, ether" />
+<meta property="og:title" content="Mint Sniper" />
+<meta property="og:url" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Mint Sniper" />
+<meta property="twitter:domain" content="" />
+<meta property="twitter:title" content="Mint Sniper" />
+<meta property="twitter:description" content="Mint Sniper" />
+<meta property="twitter:image" content="" />
+
+<head>
+
+    <!-- MAIN.CSS -->
+    <style>
+        /*
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+*/
+
+        /*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            /* 1 */
+            border-width: 0;
+            /* 2 */
+            border-style: solid;
+            /* 2 */
+            border-color: #e5e7eb;
+            /* 2 */
+        }
+
+        ::before,
+        ::after {
+            --tw-content: '';
+        }
+
+        /*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+        html {
+            line-height: 1.5;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+            -moz-tab-size: 4;
+            /* 3 */
+            -o-tab-size: 4;
+            tab-size: 4;
+            /* 3 */
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            /* 4 */
+        }
+
+        /*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+        body {
+            margin: 0;
+            /* 1 */
+            line-height: inherit;
+            /* 2 */
+        }
+
+        /*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+        hr {
+            height: 0;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+            border-top-width: 1px;
+            /* 3 */
+        }
+
+        /*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+
+        /*
+Remove the default font size and weight for headings.
+*/
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        /*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        /*
+Add the correct font weight in Edge and Safari.
+*/
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /*
+Add the correct font size in all browsers.
+*/
+
+        small {
+            font-size: 80%;
+        }
+
+        /*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+        table {
+            text-indent: 0;
+            /* 1 */
+            border-color: inherit;
+            /* 2 */
+            border-collapse: collapse;
+            /* 3 */
+        }
+
+        /*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            font-weight: inherit;
+            /* 1 */
+            line-height: inherit;
+            /* 1 */
+            color: inherit;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+            padding: 0;
+            /* 3 */
+        }
+
+        /*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+        button,
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
+            -webkit-appearance: button;
+            /* 1 */
+            background-color: transparent;
+            /* 2 */
+            background-image: none;
+            /* 2 */
+        }
+
+        /*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+        :-moz-focusring {
+            outline: auto;
+        }
+
+        /*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+        :-moz-ui-invalid {
+            box-shadow: none;
+        }
+
+        /*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+        [type='search'] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
+
+        /*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+
+        /*
+Add the correct display in Chrome and Safari.
+*/
+
+        summary {
+            display: list-item;
+        }
+
+        /*
+Removes the default spacing and border for appropriate elements.
+*/
+
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            padding: 0;
+        }
+
+        ol,
+        ul,
+        menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+Prevent resizing textareas horizontally by default.
+*/
+
+        textarea {
+            resize: vertical;
+        }
+
+        /*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
+
+        /*
+Set the default cursor for buttons.
+*/
+
+        button,
+        [role="button"] {
+            cursor: pointer;
+        }
+
+        /*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+        :disabled {
+            cursor: default;
+        }
+
+        /*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+            /* 1 */
+            vertical-align: middle;
+            /* 2 */
+        }
+
+        /*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        [type='text'],
+        [type='email'],
+        [type='url'],
+        [type='password'],
+        [type='number'],
+        [type='date'],
+        [type='datetime-local'],
+        [type='month'],
+        [type='search'],
+        [type='tel'],
+        [type='time'],
+        [type='week'],
+        [multiple],
+        textarea,
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            border-color: #6b7280;
+            border-width: 1px;
+            border-radius: 0px;
+            padding-top: 0.5rem;
+            padding-right: 0.75rem;
+            padding-bottom: 0.5rem;
+            padding-left: 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            --tw-shadow: 0 0 #0000;
+        }
+
+        [type='text']:focus,
+        [type='email']:focus,
+        [type='url']:focus,
+        [type='password']:focus,
+        [type='number']:focus,
+        [type='date']:focus,
+        [type='datetime-local']:focus,
+        [type='month']:focus,
+        [type='search']:focus,
+        [type='tel']:focus,
+        [type='time']:focus,
+        [type='week']:focus,
+        [multiple]:focus,
+        textarea:focus,
+        select:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            --tw-ring-inset: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: #2563eb;
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+            border-color: #2563eb;
+        }
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            color: #6b7280;
+            opacity: 1;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #6b7280;
+            opacity: 1;
+        }
+
+        ::-webkit-datetime-edit-fields-wrapper {
+            padding: 0;
+        }
+
+        ::-webkit-date-and-time-value {
+            min-height: 1.5em;
+        }
+
+        ::-webkit-datetime-edit,
+        ::-webkit-datetime-edit-year-field,
+        ::-webkit-datetime-edit-month-field,
+        ::-webkit-datetime-edit-day-field,
+        ::-webkit-datetime-edit-hour-field,
+        ::-webkit-datetime-edit-minute-field,
+        ::-webkit-datetime-edit-second-field,
+        ::-webkit-datetime-edit-millisecond-field,
+        ::-webkit-datetime-edit-meridiem-field {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        [multiple] {
+            background-image: initial;
+            background-position: initial;
+            background-repeat: unset;
+            background-size: initial;
+            padding-right: 0.75rem;
+            -webkit-print-color-adjust: unset;
+            color-adjust: unset;
+            print-color-adjust: unset;
+        }
+
+        [type='checkbox'],
+        [type='radio'] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+            print-color-adjust: exact;
+            display: inline-block;
+            vertical-align: middle;
+            background-origin: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+            flex-shrink: 0;
+            height: 1rem;
+            width: 1rem;
+            color: #2563eb;
+            background-color: #fff;
+            border-color: #6b7280;
+            border-width: 1px;
+            --tw-shadow: 0 0 #0000;
+        }
+
+        [type='checkbox'] {
+            border-radius: 0px;
+        }
+
+        [type='radio'] {
+            border-radius: 100%;
+        }
+
+        [type='checkbox']:focus,
+        [type='radio']:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+            --tw-ring-inset: var(--tw-empty,
+                    /*!*/
+                    /*!*/
+                );
+            --tw-ring-offset-width: 2px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: #2563eb;
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+        }
+
+        [type='checkbox']:checked,
+        [type='radio']:checked {
+            border-color: transparent;
+            background-color: currentColor;
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        [type='checkbox']:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+        }
+
+        [type='radio']:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+        }
+
+        [type='checkbox']:checked:hover,
+        [type='checkbox']:checked:focus,
+        [type='radio']:checked:hover,
+        [type='radio']:checked:focus {
+            border-color: transparent;
+            background-color: currentColor;
+        }
+
+        [type='checkbox']:indeterminate {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
+            border-color: transparent;
+            background-color: currentColor;
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        [type='checkbox']:indeterminate:hover,
+        [type='checkbox']:indeterminate:focus {
+            border-color: transparent;
+            background-color: currentColor;
+        }
+
+        [type='file'] {
+            background: unset;
+            border-color: inherit;
+            border-width: 0;
+            border-radius: 0;
+            padding: 0;
+            font-size: unset;
+            line-height: inherit;
+        }
+
+        [type='file']:focus {
+            outline: 1px solid ButtonText;
+            outline: 1px auto -webkit-focus-ring-color;
+        }
+
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+        }
+
+        ::-webkit-backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1280px;
+            }
+        }
+
+        @media (min-width: 1536px) {
+            .container {
+                max-width: 1536px;
+            }
+        }
+
+        .visible {
+            visibility: visible;
+        }
+
+        .static {
+            position: static;
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .bottom-0 {
+            bottom: 0px;
+        }
+
+        .bottom-16 {
+            bottom: 4rem;
+        }
+
+        .left-16 {
+            left: 4rem;
+        }
+
+        .right-0 {
+            right: 0px;
+        }
+
+        .-z-10 {
+            z-index: -10;
+        }
+
+        .-z-50 {
+            z-index: -50;
+        }
+
+        .z-20 {
+            z-index: 20;
+        }
+
+        .m-5 {
+            margin: 1.25rem;
+        }
+
+        .m-auto {
+            margin: auto;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mt-8 {
+            margin-top: 2rem;
+        }
+
+        .mt-5 {
+            margin-top: 1.25rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .table {
+            display: table;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .h-full {
+            height: 100%;
+        }
+
+        .h-10 {
+            height: 2.5rem;
+        }
+
+        .h-32 {
+            height: 8rem;
+        }
+
+        .w-11\/12 {
+            width: 91.666667%;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .w-2\/3 {
+            width: 66.666667%;
+        }
+
+        .w-1\/3 {
+            width: 33.333333%;
+        }
+
+        .w-32 {
+            width: 8rem;
+        }
+
+        .w-64 {
+            width: 16rem;
+        }
+
+        .min-w-fit {
+            min-width: -webkit-fit-content;
+            min-width: -moz-fit-content;
+            min-width: fit-content;
+        }
+
+        .max-w-2xl {
+            max-width: 42rem;
+        }
+
+        .flex-shrink {
+            flex-shrink: 1;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .border-collapse {
+            border-collapse: collapse;
+        }
+
+        .translate-y-0 {
+            --tw-translate-y: 0px;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .resize {
+            resize: both;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        .grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .gap-5 {
+            gap: 1.25rem;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-black {
+            --tw-border-opacity: 1;
+            border-color: rgb(0 0 0 / var(--tw-border-opacity));
+        }
+
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        }
+
+        .bg-black {
+            --tw-bg-opacity: 1;
+            background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+        }
+
+        .bg-opacity-50 {
+            --tw-bg-opacity: 0.5;
+        }
+
+        .bg-\[url\(\'\/src\/media\/pink-sniper\.gif\'\)\] {
+            background-image: url('/src/media/pink-sniper.gif');
+        }
+
+        .p-2 {
+            padding: 0.5rem;
+        }
+
+        .p-6 {
+            padding: 1.5rem;
+        }
+
+        .px-5 {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+
+        .px-2 {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .pt-16 {
+            padding-top: 4rem;
+        }
+
+        .pt-2 {
+            padding-top: 0.5rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .font-mono {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .text-5xl {
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-extrabold {
+            font-weight: 800;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .leading-none {
+            line-height: 1;
+        }
+
+        .text-black {
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity));
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity));
+        }
+
+        .underline {
+            -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+        }
+
+        .outline {
+            outline-style: solid;
+        }
+
+        .filter {
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+        }
+
+        .transition {
+            transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .box-shadow-black {
+            box-shadow: 0.125rem 0.125rem 0 0px #000;
+        }
+
+        /* debug */
+
+        /* div {outline: 1px solid red;} */
+
+        /* cursor */
+
+        * {
+            cursor: url('../media/cursor.cur'), crosshair;
+        }
+
+        @-webkit-keyframes move {
+            0% {
+                transform: scale(1) translate(10px, -30px);
+            }
+
+            38% {
+                transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+            }
+
+            40% {
+                transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+            }
+
+            78% {
+                transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+            }
+
+            80% {
+                transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+            }
+
+            100% {
+                transform: scale(1) translate(10px, -30px);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: scale(1) translate(10px, -30px);
+            }
+
+            38% {
+                transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+            }
+
+            40% {
+                transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg);
+            }
+
+            78% {
+                transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+            }
+
+            80% {
+                transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg);
+            }
+
+            100% {
+                transform: scale(1) translate(10px, -30px);
+            }
+        }
+
+        /* color changer */
+
+        .mouse-bg-color {
+            background: hsl(var(--h), 80%, 33%);
+            z-index: -10;
+        }
+
+        .black-stroke-1 {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+        .color-reverse {
+            color: hsl(var(--d), 100%, 50%);
+        }
+
+        .bg-color-reverse {
+            background: hsl(var(--d), 100%, 50%);
+        }
+
+        .dotted-bg {
+            background-image: radial-gradient(black 1px, transparent 0);
+            background-size: 40px 40px;
+            background-position: -19px -19px;
+        }
+
+        .brutalborder {
+            border-width: 1px;
+            --tw-border-opacity: 1;
+            border-color: rgb(0 0 0 / var(--tw-border-opacity));
+            box-shadow: 0.125rem 0.125rem 0 0px #000;
+            box-sizing: border-box;
+        }
+
+        button:active {
+            translate: 2px, 2px;
+            /* border-width: 5px; */
+            border-color: rgb(0 0 0 / var(--tw-border-opacity));
+            box-shadow: 0 0 0 0px #000;
+        }
+
+        /* windows */
+
+        .window {
+            background-color: white;
+            border-width: 1px;
+            --tw-border-opacity: 1;
+            border-color: rgb(0 0 0 / var(--tw-border-opacity));
+            box-shadow: 0.125rem 0.125rem 0 0px #000;
+        }
+
+        .titlebar {
+            text-align: center;
+            width: 100%;
+            height: 20px;
+            border-bottom: 1px solid black;
+        }
+
+        .buttons {
+            padding-right: 8px;
+            padding-top: 3px;
+            float: right;
+            line-height: 0px;
+        }
+
+        .close {
+            width: 11px;
+            height: 11px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .crossclose {
+            position: relative;
+            height: 11px;
+            width: 11px;
+            /* maintain 1:1 aspect ratio */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .crossclose::before,
+        .crossclose::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            /* cross thickness */
+            background-color: black;
+        }
+
+        .crossclose::before {
+            transform: rotate(45deg);
+        }
+
+        .crossclose::after {
+            transform: rotate(-45deg);
+        }
+
+        /* image rotation */
+
+        .rotate {
+            margin: -60px 0 0 -60px;
+            -webkit-animation: spin 32s linear infinite;
+            animation: spin 32s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        /* glitch gigachad hero */
+
+        .glitch {
+            text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                0.025em 0.04em 0 #fffc00;
+            -webkit-animation: glitch 725ms infinite;
+            animation: glitch 725ms infinite;
+            z-index: 30;
+        }
+
+        .glitch span {
+            top: 0;
+            left: 0;
+        }
+
+        .glitch span:first-child {
+            -webkit-animation: glitch 500ms infinite;
+            animation: glitch 500ms infinite;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+            clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+            transform: translate(-0.04em, -0.03em);
+            opacity: 0.75;
+        }
+
+        .glitch span:last-child {
+            -webkit-animation: glitch 375ms infinite;
+            animation: glitch 375ms infinite;
+            -webkit-clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+            clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+            transform: translate(0.04em, 0.03em);
+            opacity: 0.75;
+        }
+
+        @-webkit-keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                    0.025em 0.04em 0 #fffc00;
+            }
+
+            15% {
+                text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                    0.025em 0.04em 0 #fffc00;
+            }
+
+            16% {
+                text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                    -0.05em -0.05em 0 #fffc00;
+            }
+
+            49% {
+                text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                    -0.05em -0.05em 0 #fffc00;
+            }
+
+            50% {
+                text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                    0 -0.04em 0 #fffc00;
+            }
+
+            99% {
+                text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                    0 -0.04em 0 #fffc00;
+            }
+
+            100% {
+                text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+                    -0.04em -0.025em 0 #fffc00;
+            }
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                    0.025em 0.04em 0 #fffc00;
+            }
+
+            15% {
+                text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+                    0.025em 0.04em 0 #fffc00;
+            }
+
+            16% {
+                text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                    -0.05em -0.05em 0 #fffc00;
+            }
+
+            49% {
+                text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+                    -0.05em -0.05em 0 #fffc00;
+            }
+
+            50% {
+                text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                    0 -0.04em 0 #fffc00;
+            }
+
+            99% {
+                text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+                    0 -0.04em 0 #fffc00;
+            }
+
+            100% {
+                text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+                    -0.04em -0.025em 0 #fffc00;
+            }
+        }
+
+        .slidescontainer {
+            overflow: hidden;
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .slidescontainer div {
+            min-width: 300px;
+            margin-left: 20px;
+            -webkit-animation: slide 30s linear infinite alternate;
+            animation: slide 30s linear infinite alternate;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .aqua {
+            background-color: aqua;
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-2400px, 0, 0);
+                /* The image width */
+            }
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(-2400px, 0, 0);
+                /* The image width */
+            }
+        }
+
+        /* glitch letter and decoration switching */
+
+        .glitch-letters {
+            text-align: center;
+            font-family: "Roboto", monospace;
+            -webkit-animation: cray 6s infinite steps(50);
+            animation: cray 6s infinite steps(50);
+        }
+
+        @-webkit-keyframes cray {
+            2% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            4% {
+                font-weight: 600;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            6% {
+                font-weight: 300;
+                font-style: italic;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            8% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            10% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: uppercase;
+            }
+
+            12% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            14% {
+                font-weight: 600;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            16% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: none;
+            }
+
+            18% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            20% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            22% {
+                font-weight: 400;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            24% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            26% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+
+            28% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            30% {
+                font-weight: 700;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            32% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            34% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            36% {
+                font-weight: 400;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            38% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            40% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            42% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            44% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            46% {
+                font-weight: 100;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            48% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            50% {
+                font-weight: 300;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+
+            52% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            54% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            56% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            58% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: none;
+            }
+
+            60% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            62% {
+                font-weight: 600;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            64% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            66% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            68% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            70% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            72% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            74% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            76% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            78% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            80% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            82% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            84% {
+                font-weight: 200;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            86% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: capitalize;
+            }
+
+            88% {
+                font-weight: 500;
+                font-style: italic;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            90% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            92% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            94% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            96% {
+                font-weight: 600;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            98% {
+                font-weight: 600;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+        }
+
+        @keyframes cray {
+            2% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            4% {
+                font-weight: 600;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            6% {
+                font-weight: 300;
+                font-style: italic;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            8% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            10% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: uppercase;
+            }
+
+            12% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            14% {
+                font-weight: 600;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            16% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: none;
+            }
+
+            18% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            20% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            22% {
+                font-weight: 400;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            24% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            26% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+
+            28% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            30% {
+                font-weight: 700;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            32% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            34% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            36% {
+                font-weight: 400;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            38% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            40% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            42% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            44% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            46% {
+                font-weight: 100;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            48% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            50% {
+                font-weight: 300;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+
+            52% {
+                font-weight: 400;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            54% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            56% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            58% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: none;
+            }
+
+            60% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            62% {
+                font-weight: 600;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            64% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            66% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            68% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            70% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            72% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            74% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: lowercase;
+            }
+
+            76% {
+                font-weight: 300;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            78% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            80% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            82% {
+                font-weight: 100;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            84% {
+                font-weight: 200;
+                font-style: italic;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            86% {
+                font-weight: 500;
+                font-style: normal;
+                text-decoration: line-through;
+                text-transform: capitalize;
+            }
+
+            88% {
+                font-weight: 500;
+                font-style: italic;
+                text-decoration: underline;
+                text-transform: none;
+            }
+
+            90% {
+                font-weight: 200;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            92% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            94% {
+                font-weight: 700;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            96% {
+                font-weight: 600;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+
+            98% {
+                font-weight: 600;
+                font-style: normal;
+                text-decoration: none;
+                text-transform: none;
+            }
+        }
+
+        .hover\:translate-y-2:hover {
+            --tw-translate-y: 0.5rem;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .hover\:cursor-pointer:hover {
+            cursor: pointer;
+        }
+
+        .hover\:bg-white:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+        }
+
+        .hover\:text-black:hover {
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity));
+        }
+
+        @media (min-width: 768px) {
+            .md\:order-1 {
+                order: 1;
+            }
+
+            .md\:mt-0 {
+                margin-top: 0px;
+            }
+
+            .md\:w-1\/4 {
+                width: 25%;
+            }
+
+            .md\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:fixed {
+                position: fixed;
+            }
+
+            .lg\:bottom-16 {
+                bottom: 4rem;
+            }
+
+            .lg\:right-16 {
+                right: 4rem;
+            }
+
+            .lg\:hidden {
+                display: none;
+            }
+
+            .lg\:text-\[300px\] {
+                font-size: 300px;
+            }
+        }
+    </style>
+
+
+    <script src="https://cdn.tailwindcss.com/"></script>
+
+    <!-- colors.js -->
+    <script>
+        const root = document.documentElement;
+
+        var x = 100;
+        var y = 28;
+        root.style.setProperty('--h', x)
+        root.style.setProperty('--d', x - 180)
+
+        root.addEventListener('mousemove', e => {
+            let x = e.clientX / innerWidth,
+                y = e.clientY / innerWidth;
+            x = Math.floor(Math.sqrt(x) * 230);
+            root.style.setProperty('--h', x)
+            root.style.setProperty('--d', x - 180)
+        });
+
+    </script>
+
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script defer src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+
+    <!-- abi.js -->
+    <script>
+        var contractAbi = [{ "inputs": [{ "internalType": "uint64", "name": "subscriptionId", "type": "uint64" }], "stateMutability": "nonpayable", "type": "constructor" }, { "inputs": [{ "internalType": "address", "name": "have", "type": "address" }, { "internalType": "address", "name": "want", "type": "address" }], "name": "OnlyCoordinatorCanFulfill", "type": "error" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "sender", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "MintSpotsBought", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "winner", "type": "address" }, { "indexed": false, "internalType": "uint256", "name": "NFTId", "type": "uint256" }], "name": "NFTRewarded", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": true, "internalType": "address", "name": "previousOwner", "type": "address" }, { "indexed": true, "internalType": "address", "name": "newOwner", "type": "address" }], "name": "OwnershipTransferred", "type": "event" }, { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "uint256[]", "name": "randomWords", "type": "uint256[]" }], "name": "RandomWordsReceived", "type": "event" }, { "inputs": [{ "internalType": "address", "name": "addr", "type": "address" }], "name": "addressExists", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "_amount", "type": "uint256" }], "name": "buyMintSpots", "outputs": [], "stateMutability": "payable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "addr", "type": "address" }], "name": "hasBalance", "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "mintPrice", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "", "type": "address" }], "name": "mintSpotBalance", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "name": "mintSpots", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "requestId", "type": "uint256" }, { "internalType": "uint256[]", "name": "randomWords", "type": "uint256[]" }], "name": "rawFulfillRandomWords", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "renounceOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "NFTAddress", "type": "address" }, { "internalType": "uint256", "name": "_NFTId", "type": "uint256" }], "name": "requestRandomWords", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "rewardNFT", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "s_NFTAddress", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "s_NFTId", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "name": "s_randomWords", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [], "name": "s_requestId", "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "newOwner", "type": "address" }], "name": "transferOwnership", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [], "name": "withdrawFunds", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "withdrawFundsAmount", "outputs": [], "stateMutability": "nonpayable", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "_tokenContract", "type": "address" }, { "internalType": "uint256", "name": "_amount", "type": "uint256" }], "name": "withdrawToken", "outputs": [], "stateMutability": "nonpayable", "type": "function" }]
+    </script>
+
+    <!-- crypto.js -->
+    <script>
+
+        //// Alpine Vars
+
+        var gCHAIN = 'GOERLI';
+        var gCHAIN = 'MAINNET';
+
+        // setting Alpine.js global variables. You can access these from anywhere
+        Alpine.store("connected", false);
+        Alpine.store("connectButtonContent", "CONNECT WALLET");
+        Alpine.store("connectButtonDisabled", false);
+
+        Alpine.store('processingTransaction', false);
+        Alpine.store("buyButtonContent", "BUY BULLET");
+
+        // goerli: 0x5c1b67ed2809e371aabbc58d934282e8aa7e3fd4
+        // id 716
+        // https://goerli.etherscan.io/address/0x5c1b67ed2809e371aabbc58d934282e8aa7e3fd4
+        var goerliAddress = "0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4";
+
+        // mainnet: 0xd092f910be70328426530bca92c746de1e0989ec // id 339
+        // id 339
+        // https://etherscan.io/address/0xd092f910be70328426530bca92c746de1e0989ec
+        var mainnetAddress = "0xd092f910be70328426530bca92c746de1e0989ec";
+
+
+
+
+        Alpine.store("contractAddress", mainnetAddress);
+        Alpine.store("contractAbi", contractAbi);
+
+        // setting a global prover oject
+        const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+        let web3 = window.ethereum;
+
+
+        // function to connect metamask and switch to certain network
+        async function connect() {
+
+            // Prompt user for account connections
+            await provider.send("eth_requestAccounts", []);
+            const signer = provider.getSigner();
+            console.log("Logged in with Account:", await signer.getAddress());
+
+            // request connection to goerli network
+            if (gCHAIN == 'GOERLI') {
+                web3
+                    .request({
+                        method: "wallet_switchEthereumChain",
+                        params: [{ chainId: "0x5" }],
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                    }).catch(function (error) {
+                        console.log(error);
+                    }).then(function () {
+                        Alpine.store("connectButtonContent", "CONNECTED");
+                        Alpine.store("connected", true);
+                    })
+            } else if (gCHAIN == 'MAINNET') {
+                web3
+                    .request({
+                        method: "wallet_switchEthereumChain",
+                        params: [{ chainId: "0x1" }],
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                    }).catch(function (error) {
+                        console.log(error);
+                    }).then(function () {
+                        Alpine.store("connectButtonContent", "CONNECTED");
+                        Alpine.store("connected", true);
+                    })
+            }
+        }
+
+
+        // buy 1 mintSlot in contract
+        async function buySlot() {
+            if (Alpine.store("processingTransaction")) {
+                return;
+            }
+            if (!Alpine.store("connected")) {
+                console.log("Not connected to network");
+                alert("Please connect to network with Metamask!");
+                return;
+            }
+            try {
+
+                Alpine.store('processingTransaction', true);
+                Alpine.store('buyButtonContent', `<div role="status">
+    <svg class="inline mr-2 w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+    </svg> Processing...
+    <span class="sr-only">Loading...</span>
+  </div>`);
+                var contractAddress = Alpine.store("contractAddress");
+                var contractAbi = Alpine.store("contractAbi");
+                var signer = provider.getSigner();
+                var contract = new ethers.Contract(contractAddress, contractAbi, signer);
+
+                // add a value of 0.0066 ETH to the tx
+                const options = {
+                    value: ethers.utils.parseEther("0.0066")
+                };
+
+                // call function and listen to event
+                const tx = await contract.buyMintSpots(1, options);
+                Alpine.store('buyButtonContent', `<div role="status">
+    <svg class="inline mr-2 w-5 h-5 text-gray-200 animate-spin dark:text-gray-600 fill-gray-600 dark:fill-gray-300" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+    </svg> Processing tx...
+    <span class="sr-only">Loading...</span>
+  </div>`);
+                console.log("tx: " + tx);
+
+                // wait for tx to be mined
+                const tx_receipt = await tx.wait()
+
+                Alpine.store('processingTransaction', false);
+                Alpine.store('buyButtonContent', 'BUY SLOT');
+
+                console.log("tx_receipt: " + tx_receipt);
+
+                alert("You have bought a slot! \n\n" + "tx: " + tx.hash);
+
+            } catch (error) {
+                Alpine.store('buyButtonContent', 'Error')
+                alert(error);
+            }
+        }
+
+    </script>
+
+
+    <style>
+        [x-cloak] {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="mouse-bg-color">
+
+    <!-- HEADER -->
+    <header class="">
+
+        <div class="grid grid-cols-3 gap-3 text-center absolute right-0 p-6 max-w-2xl "
+          style="grid-template-columns: 1fr 1fr auto;">
+      
+          <!-- <div class="m-auto">
+            <a href="https://opensea.io/hugo0.eth" target="_blank">
+              <svg class="" fill="#04111D" height="20" viewBox="0 0 293.775 293.671" width="20" xmlns="http://www.w3.org/2000/svg"><g id="etherscan-logo-circle" transform="translate(-219.378 -213.33)"><path d="M280.433,353.152A12.45,12.45,0,0,1,292.941,340.7l20.737.068a12.467,12.467,0,0,1,12.467,12.467v78.414c2.336-.692,5.332-1.43,8.614-2.2a10.389,10.389,0,0,0,8.009-10.11V322.073a12.469,12.469,0,0,1,12.468-12.47h20.778a12.469,12.469,0,0,1,12.467,12.467v90.279s5.2-2.106,10.269-4.245a10.408,10.408,0,0,0,6.353-9.577V290.9a12.466,12.466,0,0,1,12.466-12.467h20.778A12.468,12.468,0,0,1,450.815,290.9v88.625c18.014-13.055,36.271-28.758,50.759-47.639a20.926,20.926,0,0,0,3.185-19.537,146.6,146.6,0,0,0-136.644-99.006c-81.439-1.094-148.744,65.385-148.736,146.834a146.371,146.371,0,0,0,19.5,73.45,18.56,18.56,0,0,0,17.707,9.173c3.931-.346,8.825-.835,14.643-1.518a10.383,10.383,0,0,0,9.209-10.306V353.152" data-name="Path 1" id="Path_1"></path><path d="M244.417,398.641A146.808,146.808,0,0,0,477.589,279.9c0-3.381-.157-6.724-.383-10.049-53.642,80-152.686,117.4-232.79,128.793" data-name="Path 2" id="Path_2" transform="translate(35.564 80.269)"></path></g></svg>
+            </a>
+          </div> -->
+          <button x-html="Alpine.store('buyButtonContent')" x-on:click="buySlot()"
+            class="min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black">
+            Buy Bullet </button>
+      
+          <button x-text="Alpine.store('connectButtonContent')" x-on:click="connect()"
+            class="min-w-fit px-2 text-sm border border-black h-10 uppercase bg-white box-shadow-black"> Connect Wallet
+          </button>
+      
+          <!-- GOERLI -->
+          <!-- <button
+            class="min-w-fit px-2 text-sm border border-black h-10 uppercase bg-white box-shadow-black hover:cursor-pointer" onclick="window.open('https://goerli.etherscan.io/address/0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4', '_blank');">
+              <a href="https://goerli.etherscan.io/address/0x5c1b67ED2809e371aabbc58D934282E8Aa7E3fd4      " target="_blank">
+              <svg class="hover:cursor-pointer" fill="#04111D" height="20" viewBox="0 0 293.775 293.671" width="20" xmlns="http://www.w3.org/2000/svg"><g id="etherscan-logo-circle" transform="translate(-219.378 -213.33)"><path d="M280.433,353.152A12.45,12.45,0,0,1,292.941,340.7l20.737.068a12.467,12.467,0,0,1,12.467,12.467v78.414c2.336-.692,5.332-1.43,8.614-2.2a10.389,10.389,0,0,0,8.009-10.11V322.073a12.469,12.469,0,0,1,12.468-12.47h20.778a12.469,12.469,0,0,1,12.467,12.467v90.279s5.2-2.106,10.269-4.245a10.408,10.408,0,0,0,6.353-9.577V290.9a12.466,12.466,0,0,1,12.466-12.467h20.778A12.468,12.468,0,0,1,450.815,290.9v88.625c18.014-13.055,36.271-28.758,50.759-47.639a20.926,20.926,0,0,0,3.185-19.537,146.6,146.6,0,0,0-136.644-99.006c-81.439-1.094-148.744,65.385-148.736,146.834a146.371,146.371,0,0,0,19.5,73.45,18.56,18.56,0,0,0,17.707,9.173c3.931-.346,8.825-.835,14.643-1.518a10.383,10.383,0,0,0,9.209-10.306V353.152" data-name="Path 1" id="Path_1"></path><path d="M244.417,398.641A146.808,146.808,0,0,0,477.589,279.9c0-3.381-.157-6.724-.383-10.049-53.642,80-152.686,117.4-232.79,128.793" data-name="Path 2" id="Path_2" transform="translate(35.564 80.269)"></path></g></svg>
+            </a>
+          </button> -->
+          <!-- MAINNET -->
+          <button
+          class="min-w-fit px-2 text-sm border border-black h-10 uppercase bg-white box-shadow-black hover:cursor-pointer" onclick="window.open('https://etherscan.io/address/0xd092f910be70328426530bca92c746de1e0989ec', '_blank');">
+            <a href="https://etherscan.io/address/0xd092f910be70328426530bca92c746de1e0989ec" target="_blank">
+            <svg class="hover:cursor-pointer" fill="#04111D" height="20" viewBox="0 0 293.775 293.671" width="20" xmlns="http://www.w3.org/2000/svg"><g id="etherscan-logo-circle" transform="translate(-219.378 -213.33)"><path d="M280.433,353.152A12.45,12.45,0,0,1,292.941,340.7l20.737.068a12.467,12.467,0,0,1,12.467,12.467v78.414c2.336-.692,5.332-1.43,8.614-2.2a10.389,10.389,0,0,0,8.009-10.11V322.073a12.469,12.469,0,0,1,12.468-12.47h20.778a12.469,12.469,0,0,1,12.467,12.467v90.279s5.2-2.106,10.269-4.245a10.408,10.408,0,0,0,6.353-9.577V290.9a12.466,12.466,0,0,1,12.466-12.467h20.778A12.468,12.468,0,0,1,450.815,290.9v88.625c18.014-13.055,36.271-28.758,50.759-47.639a20.926,20.926,0,0,0,3.185-19.537,146.6,146.6,0,0,0-136.644-99.006c-81.439-1.094-148.744,65.385-148.736,146.834a146.371,146.371,0,0,0,19.5,73.45,18.56,18.56,0,0,0,17.707,9.173c3.931-.346,8.825-.835,14.643-1.518a10.383,10.383,0,0,0,9.209-10.306V353.152" data-name="Path 1" id="Path_1"></path><path d="M244.417,398.641A146.808,146.808,0,0,0,477.589,279.9c0-3.381-.157-6.724-.383-10.049-53.642,80-152.686,117.4-232.79,128.793" data-name="Path 2" id="Path_2" transform="translate(35.564 80.269)"></path></g></svg>
+          </a>
+        </button>
+        </div>
+      
+        </div>
+      </header>
+
+
+    <div class="dotted-bg h-full -z-10">
+
+
+        <!-- MAIN -->
+        <!-- BANNER -->
+<div class="text-center fixed bottom-16 left-16 -z-50 overflow-hidden">
+    <a href="#" class="visible text-5xl lg:text-[300px] font-bold uppercase black-stroke-1 color-reverse glitch"
+        x-on:click="buySlot()">
+        Snipe Now
+    </a>
+</div>
+
+<div class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3 pt-16 font-mono text-black">
+
+    <!-- first window -->
+    <div class="window w-11/12 m-5 lg:1/3 translate-y-0 hover:translate-y-2  bg-[url('/src/media/pink-sniper.gif')]">
+        <div class="titlebar font-bold text-sm font-mono text-black uppercase">
+            <div class="buttons">
+                <div class="crossclose">
+                </div>
+            </div>
+            How it Works
+        </div>
+
+        <div class="p-6 bg-white bg-opacity-50">
+            <span class="font-bold text-3xl font-mono text-black">
+                > Our bots <span class="glitch-letters font-extrabold"> scan </span> the interwebs for free mints. They
+                never miss.
+
+                <p class="pt-2"> > We snipe the the free mint smart contracts automatically with inhuman speed. </p>
+                <p class="pt-2"> > Buy a bullet for Ξ0.0066 ($10) and you'll get a free mint that we'll snipe for you.
+                </p>
+            </span>
+            <div class="flex m-auto lg:hidden">
+                <button
+                    class="mt-4 m-auto button w-1/3 min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black"
+                    x-html="Alpine.store('buyButtonContent')" x-on:click="buySlot()">
+                    Buy Bullet
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- second window -->
+    <div class="window w-11/12 m-5 lg:1/3 hover:translate-y-2 ">
+        <div class="titlebar font-bold text-sm font-mono text-black uppercase">
+            <div class="buttons">
+                <div class="crossclose">
+                </div>
+            </div>
+            Mint Snipes
+        </div>
+        <div class="p-2">
+
+            <div class="slidescontainer">
+
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase text-center px-2"> Bored Donkey #263 </p>
+                    <img src="https://lh3.googleusercontent.com/H951Swv6MucLx56U6U_1reRR27C6fG9n8sHtp0_CYVC2OK5puSECIzUtxVRQfS-qkAtEe3I1eKvFBsw9byy2vEu8rQGrncsva53g=s0" alt="">
+                    <a href="https://opensea.io/0x6B3751c5b04Aa818EA90115AA06a4D9A36A16f02" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by 0x6B3751c...</p>
+                    </a>
+                </div>
+
+
+                <a href="https://opensea.io/kkonrad.eth" target="_blank">
+                    <div class="brutalborder bg-white w-32">
+                        <p class="text-sm uppercase text-center px-2"> The Appreciator #3129 </p>
+                        <img src="/src/media/The Appreciator 3129.gif" alt="">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by kkonrad.eth </p>
+                    </div>
+                </a>
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase text-center px-2"> Doodled Toadz #1385 </p>
+                    <img src="https://lh3.googleusercontent.com/cR27bCJRPDmEJ2VUQfnzYxsbDCxXOoqkqaNIs0D8rOys6IFkPwBk6miaVYxN7FcGwr5GXCO85dK4pmYhij2f_Y4kMpmk4paVX4bONg=w600" alt="">
+                    <a href="https://opensea.io/0x6B3751c5b04Aa818EA90115AA06a4D9A36A16f02" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by 0x6B3751...</p>
+                    </a>
+                </div>
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase text-center px-2"> Parrot #1501 </p>
+                    <img src="/src/media/parrot 1501.png" alt="">
+                    <a href="https://opensea.io/hugo0.eth" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by hugo0.eth </p>
+                    </a>
+                </div>
+
+
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase text-center px-2"> Skeleton Ape Yacht Club #1787 </p>
+                    <img src="https://lh3.googleusercontent.com/50lVcGteBg4sgJOtGUPlu9mM74k-C5RZa3r7PfljvJIcD_hsR95yM0xCAyvTr4xEsVUuaaSXzQ7K44-KjofynTnAWDMGb3B4j88IMlU=s0" alt="">
+                    <a href="https://opensea.io/0x6B3751c5b04Aa818EA90115AA06a4D9A36A16f02" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by 0x6B3751c...</p>
+                    </a>
+                </div>
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase  text-center px-2"> Revengebirds #4635 </p>
+                    <img src="/src/media/Revengebirds 4635.png" alt="">
+                    <a href="https://opensea.io/hugo0.eth" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by hugo0.eth </p>
+                    </a>
+                </div>
+
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase  text-center px-2"> Not Bored Ape Yoga Club #1477 </p>
+                    <img src="/src/media/Not Bored Ape Yoga Club 1477.png" alt="">
+                    <a href="https://opensea.io/hugo0.eth" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by hugo0.eth </p>
+                    </a>
+                </div>
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase text-center px-2"> your mom #3550</p>
+                    <img src="https://lh3.googleusercontent.com/bvwzeqdFu4fHT6OOE8Lhz2ySaJ6RyCU0oiXn0FVi59UpPwNxe2mTgcqQV27bUD5PRE5eUQLkC0WHpcx2gUxpxcoGLwsG5xNmmUtQ7ss=s0" alt="">
+                    <a href="https://opensea.io/0x6B3751c5b04Aa818EA90115AA06a4D9A36A16f02" target="_blank">
+                        <p class="text-sm  text-center px-2 leading-none"> Sniped by 0x6B3751c...</p>
+                    </a>
+                </div>
+                
+                
+
+
+                <div class="brutalborder bg-white w-32">
+                    <p class="text-sm uppercase text-center px-2"> This could be you </p>
+                    <img src="https://ipfs.io/ipfs/QmNqFf8xKXGtPWAXrrDkBgAUns2FVZV68CSX38yD73bkh3?filename=4Jo1.gif" alt="">
+                    <p class="text-sm  text-center px-2 leading-none"> Why isn't it yet? </p>
+                
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- third window -->
+    <div class="window w-11/12 m-5 lg:1/3 hover:translate-y-2 ">
+        <div class="titlebar font-bold text-sm font-mono text-black uppercase">
+            <div class="buttons">
+                <div class="crossclose">
+                </div>
+            </div>FUD?
+        </div>
+        <div class="p-6">
+
+            <span class="font-bold text-3xl font-mono text-black" x-data="{open: false}">
+
+                > Don't believe this? Don't worry.
+                <span class="bg-black text-white hover:text-black hover:bg-white" @click="open=!open"> Balloo
+                </span>will win
+                you over. <img src="/src/media/baloo_square.png" alt="" class="w-64 inline absolute" x-show="open"
+                    x-transition="" style="display: none;" @click="open=!open">
+
+                <p class="pt-2"> > In case that doesn't work. Here is <a href="src/html/backtest_free-mint.slides.html"
+                        target="_blank" class="bg-black text-white hover:text-black hover:bg-white">a very scientific
+                        case study</a> (avg ROI 650%) </p>
+                <p class="pt-2"> > Try your shot buy a bullet for gas cost X2 ($10-ish).</p>
+
+                
+
+
+
+            </span>
+            <div class="flex m-auto lg:hidden">
+                <button
+                    class="mt-4 m-auto button w-1/3 min-w-fit px-2 text-sm border border-black h-10 uppercase bg-color-reverse box-shadow-black"
+                    x-html="Alpine.store('buyButtonContent')" x-on:click="buySlot()">
+                    Buy Bullet
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="h-32">.</div>
+
+
+<!-- rotating Latest Mint -->
+<div class="w-full">
+    <div class="rotate mx-auto brutalborder bg-white w-32 z-20 lg:fixed lg:bottom-16 lg:right-16">
+        <p class="text-center px-2"> Latest Snipe </p>
+
+        <img class="w-32" src="/src/media/parrot 1501.png" alt="">
+
+        <a href="https://opensea.io/assets/ethereum/0xe3d234267efea9fd5150cb6d630ab3123fa49f55/1501">
+            <p class="text-sm text-center px-2 leading-none"> Parrot #1501 went to hugo0.eth </p>
+        </a>
+    </div>
+</div>
+
+<div class="h-32">.</div>
+
+
+
+
+</div>
+
+        <!-- FOOTER -->
+        <!-- This example requires Tailwind CSS v2.0+ -->
+
+<footer class="fixed bottom-0 w-full">
+
+    <div class="w-2/3 md:w-1/4 mx-auto">
+
+        <div class="mt-8 md:mt-0 md:order-1 brutalborder bg-white">
+            <p class="text-center uppercase text-sm px-5"> <a class="" href="https://www.prophet.money">
+                    With 💙 by 
+                    <a href="https://www.prophet.money"> the <span class="underline">Prophet</span> team</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+    </div>
+
+
+    <script>
+        console.log(" ✰ Mint Sniper ✰ (❀う-´)づ︻╦̵̵̿╤──");
+    </script>
+
+
+</body>
+
+</html>
