@@ -267,14 +267,12 @@ def run_once(mins=5):
 
 if __name__ == "__main__":
     minutes = 15
-    print(f'running at {datetime.datetime.now()}')
+    print(f"running at {datetime.datetime.now()}")
     try:
-        run_once(mins=minutes+5)
+        run_once(mins=minutes + 5)
     except Exception as e:
         print(e)
         print(traceback.format_exc())
-
-
 
     # while True:
     #     print(f'running at {datetime.datetime.now()}')
@@ -286,6 +284,6 @@ if __name__ == "__main__":
     #         exc_type, exc_obj, exc_tb = sys.exc_info()
     #         fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
     #         print(exc_type, fname, exc_tb.tb_lineno)
-        
+
     #     print(f"\nsleeping for {minutes} minutes...")
     #     time.sleep(60 * minutes)

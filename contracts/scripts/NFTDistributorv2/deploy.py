@@ -31,7 +31,7 @@ def main():
         publish_source=get_publish_source(),
     )
     print("Contract deployed to:", contract.address)
-    
+
     # Brownies console.log equivalent
     # have to add emit events in contract...
     print()
